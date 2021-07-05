@@ -24,9 +24,9 @@ export const UserPage = () => {
   return (
     <div>
       <h2>User Name:{user.name}</h2>
-      <h1>Post of the user</h1>
+      <h4>Post of the user</h4>
       {postList.map((post) => {
-        return <h4>Title:{post.title}</h4>
+        return <p>Title:{post.title}</p>
       })}
     </div>
   );
