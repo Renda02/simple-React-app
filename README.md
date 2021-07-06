@@ -32,8 +32,14 @@ _TODO:
 
 _TODO: 
 
+- Created a simple design and breakdown the task.
 -  Created commentList, useList, PostList components inside a component folder.
--  
+-  `useState` to declare variable and `useEffect` to fetch data from JSONPlaceholder.
+- Use `map()` method calling a function for every array element.
+- Set ReactRouter, -Add Link to the Postpage -PostPage add Link to UserPage
+- Create PostPage component.
+- install `styled-components` to start styling the app.
+
 
 ## Libraries / Tools Used
 
