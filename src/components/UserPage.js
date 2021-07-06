@@ -1,5 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from "react-router";
+import styled from 'styled-components';
+import { PostWrapper } from "../globalStyles";
+
 
 export const UserPage = () => {
   const { userId } = useParams();
@@ -22,15 +25,47 @@ export const UserPage = () => {
   }, []);
 
   return (
-    <div>
-      <h2>User Name:<span>{user.name}</span></h2>
-      <h4>Post of the user</h4>:
+    <>
+      <UserTitle>User Name:<span>{user.name}</span></UserTitle>
+      <UserSubTitle>Post of the user</UserSubTitle>
       {postList.map((post) => {
-        return <p>Title:{post.title}</p>
+        return <PostUser>Title:{post.title}</PostUser>
       })}
-    </div>
+    </>
   );
 };
 
-export default UserPage
+export default UserPage;
+
+const PostUser = styled.p`
+  background: #343434;
+  color: #fff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  font-family: "Open Sans", sans-serif;
+  padding: 1.7rem 1.5rem;
+  width: 450px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px rgb(255 255 255 / 3%);
+  cursor:pointer;
+
+  &:hover {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #343434;
+  }
+`;
+
+
+const UserTitle = styled.h5`
+margin-bottom: 2em;
+`;
+
+const UserSubTitle = styled.h6`
+margin-bottom: 2em;
+
+`;
 
