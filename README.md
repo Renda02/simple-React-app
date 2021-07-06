@@ -30,10 +30,10 @@ _TODO:
 
 ## Proposed Solution
 
-_TODO: [ADD_SOLUTION_DESCRIPTION]_
+_TODO: 
 
-- break down the steps you followed
-- use bullet points to explain it in a very structured way
+-  Created commentList, useList, PostList components inside a component folder.
+-  
 
 ## Libraries / Tools Used
 
