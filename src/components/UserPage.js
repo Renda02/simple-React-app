@@ -1,21 +1,20 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import styled from 'styled-components';
+import styled from "styled-components";
 import { PostWrapper } from "../globalStyles";
-
 
 export const UserPage = () => {
   const { userId } = useParams();
-   const [postList,setPostList] = useState([]);
-   const [user,setUser] = useState({});
+  const [postList, setPostList] = useState([]);
+  const [user, setUser] = useState({});
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      setUser(data);
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setUser(data);
+      });
     fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
       .then((response) => response.json())
       .then((data) => {
@@ -26,10 +25,12 @@ export const UserPage = () => {
 
   return (
     <>
-      <UserTitle>User Name:<span>{user.name}</span></UserTitle>
+      <UserTitle>
+        User Name:<span>{user.name}</span>
+      </UserTitle>
       <UserSubTitle>Post of the user</UserSubTitle>
       {postList.map((post) => {
-        return <PostUser>Title:{post.title}</PostUser>
+        return <PostUser>Title:{post.title}</PostUser>;
       })}
     </>
   );
@@ -50,7 +51,7 @@ const PostUser = styled.p`
   width: 450px;
   border-radius: 8px;
   box-shadow: 5px 5px 15px rgb(255 255 255 / 3%);
-  cursor:pointer;
+  cursor: pointer;
 
   &:hover {
     transition: all 0.3s ease-out;
@@ -59,13 +60,14 @@ const PostUser = styled.p`
   }
 `;
 
-
 const UserTitle = styled.h5`
-margin-bottom: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  color:#27B08E;
 `;
 
 const UserSubTitle = styled.h6`
-margin-bottom: 2em;
-
+  margin-bottom: 2em;
+  text-align: center;
+  color:#27B08E;
 `;
-

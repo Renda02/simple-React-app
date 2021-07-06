@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+
 
 
 const CommentPage = ({ postId }) => {
@@ -8,19 +10,36 @@ const CommentPage = ({ postId }) => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data, "comment data");
+        //console.log(data, "comment data");
         setCommentList(data);
       });
   }, []);
 
   return (
-    <React.Fragment>
-      {commentList.length !== 0 && <h3>Post Comments</h3>}
+    <div>
+      {commentList.length !== 0 && <CommentTitle>Post Comments</CommentTitle>}
+      
       {commentList.map((comments) => {
-        return <p>{comments.name}</p>;
+        return <CommentName>{comments.name}</CommentName>;
       })}
-    </React.Fragment>
+    </div>
   );
 };
 
 export default CommentPage;
+
+const CommentName = styled.p`
+margin:0;
+ text-align:center;
+`;
+
+const CommentTitle = styled.h5`
+line-height:5px;
+ text-align:center;
+`;
+
+
+
+
+
+

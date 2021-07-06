@@ -22,6 +22,8 @@ const Nav = styled.nav`
   color: #ffff;
   font-size: 18px;
   margin: 0 auto;
+  padding: 1em 0;
+  margin-bottom:1em;
 `;
 
 const Content = styled.div`

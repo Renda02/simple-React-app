@@ -4,14 +4,18 @@ import { PostPage } from "./components/PostPage";
 import UserPage from "./components/UserPage";
 import PostList from "./components/PostList";
 import NavBar from "./components/NavBar";
+import React from "react";
+import {GlobalStyle} from "./globalStyles"
+
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <Router>  <NavBar />
+    <React.Fragment>
+      <Router>
+        <NavBar />
         <Switch>
-
-        
           <Route path="/users/:userId">
             <UserPage />
           </Route>
@@ -23,8 +27,11 @@ function App() {
           </Route>
         </Switch>
       </Router>{" "}
-    </div>
+      <GlobalStyle />
+    </React.Fragment>
   );
 }
 
 export default App;
+
+

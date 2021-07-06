@@ -21,7 +21,7 @@ const PostList = () => {
           <PostCard>
             <PostLink to={"/posts/" + post.id}>
               <PostLink to={"/users/" + post.userId}>
-                User: {post.userId}
+               <UserTitle>User: {post.userId}</UserTitle> 
               </PostLink>
               <hr/>
               <PostTitle>Title: <Span>{post.title}</Span></PostTitle>
@@ -60,20 +60,37 @@ const PostCard = styled.div`
   box-shadow: 5px 5px 15px rgb(255 255 255 / 3%);
   cursor:pointer;   transition: all 0.3s ease-out;
 
-  &:hover {
-    color: #42BD9E;
-    border:5px solid #42BD9E;}
+  
 `;
 
 const PostLink = styled(Link)`
   text-decoration: none;
   color:#fff;
   padding:0.3em;
+
+    }
 `;
 
 const PostTitle = styled.h5`
 margin: .5em 0 0;
+line-heght: 5px;
+
+&:hover {
+  color: #42BD6D;
+  }
 `;
+
+const UserTitle = styled.div`
+margin: .5em 0 0;
+line-heght: 5px;
+
+&:hover {
+  color: #42CD62;
+  }
+`;
+
+
+
 
 
 const Span = styled.span`
