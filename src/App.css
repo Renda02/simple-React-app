@@ -7,7 +7,7 @@
 }
 
 .post-card{
-background: cornflowerblue;
+background: #343434;  color: #fff;
   border-radius: 15px;
 display: flex;
   justify-content: center;
@@ -22,6 +22,8 @@ display: flex;
 
 .App {
   text-align: center;
+  background-color: #141414;
+
 }
 
 

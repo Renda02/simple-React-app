@@ -1,15 +1,17 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import { PostPage } from "./components/PostPage";
-
-import PostList from "./components/PostList";
 import UserPage from "./components/UserPage";
+import PostList from "./components/PostList";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router>  <NavBar />
         <Switch>
+
+        
           <Route path="/users/:userId">
             <UserPage />
           </Route>
