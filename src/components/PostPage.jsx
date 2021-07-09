@@ -14,7 +14,7 @@ export const PostPage = () => {
         console.log(data);
         setPost(data);
       });
-  }, []);
+  }, [postId]);
 
   return (
     <>
@@ -35,7 +35,7 @@ const PostPageTitle = styled.h4`
 const PostComment = styled.div`
   margin-bottom: 2em;
   border-radius: 15px;
-align-items:flex;
+  align-items: flex;
   display: flex;
   justify-content: center;
   flex-direction: column;

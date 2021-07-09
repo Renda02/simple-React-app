@@ -22,8 +22,11 @@ function App() {
           <Route path="/posts/:postId">
             <PostPage />
           </Route>
-          <Route path="/">
+          <Route path="/" exact>
             <PostList />
+          </Route>
+          <Route path="*" exact>
+      <h2>Not found 404</h2>
           </Route>
         </Switch>
       </Router>{" "}

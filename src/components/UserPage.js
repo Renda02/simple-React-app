@@ -63,11 +63,11 @@ const PostUser = styled.p`
 const UserTitle = styled.h5`
   margin-bottom: 2em;
   text-align: center;
-  color:#27B08E;
+  color: #27b08e;
 `;
 
 const UserSubTitle = styled.h6`
   margin-bottom: 2em;
   text-align: center;
-  color:#27B08E;
+  color: #27b08e;
 `;

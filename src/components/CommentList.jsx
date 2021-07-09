@@ -10,17 +10,17 @@ const CommentPage = ({ postId }) => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
       .then((response) => response.json())
       .then((data) => {
-        //console.log(data, "comment data");
+        console.log(data, "comment data");
         setCommentList(data);
       });
-  }, []);
+  }, [postId]);
 
   return (
     <div>
       {commentList.length !== 0 && <CommentTitle>Post Comments</CommentTitle>}
       
-      {commentList.map((comments) => {
-        return <CommentName>{comments.name}</CommentName>;
+      {commentList.map((comment) => {
+        return <CommentName key={comment.id}>{comment.name}</CommentName>;
       })}
     </div>
   );
