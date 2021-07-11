@@ -17,7 +17,7 @@ as well as the nested endpoints
 
 
  - Solution by [Rendani Luvhengo](mailto:rluvhengo2@gmail.com)
-
+ - [Demo](https://simple-json-blog.netlify.app/)
 
 ## Assumptions
 
