@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import styled from "styled-components";
-import { PostWrapper } from "../globalStyles";
+
 
 export const UserPage = () => {
   const { userId } = useParams();
@@ -21,7 +21,7 @@ export const UserPage = () => {
         console.log(data);
         setPostList(data);
       });
-  }, []);
+  }, [userId]);
 
   return (
     <>

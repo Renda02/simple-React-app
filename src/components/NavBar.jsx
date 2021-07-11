@@ -34,5 +34,5 @@ const Content = styled.div`
 
 const NavTitle = styled.h2`
 text-align:center;
-  }
+  
 `;
